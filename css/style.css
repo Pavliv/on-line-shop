@@ -1,0 +1,36 @@
+.previews .thumbnail {}
+.previews .img-container {
+	display: block;
+	overflow: hidden;
+}
+
+.previews img {
+	min-width: 100%;
+	max-width: 100%;
+	object-fit: cover;
+	object-position: center;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+.previews span {
+	display: block;
+}
+
+@media (min-width: 768px) {
+	.previews .img-container {
+		height: 170px;
+	}
+	.previews img {
+		max-width: 120%;
+		min-height: 100%;
+	}
+	/*.previews img:hover {
+		zoom: 1.5;
+	}*/
+}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}
