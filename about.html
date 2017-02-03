@@ -5,6 +5,7 @@
 	<title>Shop</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">	
 </head>
 <body>
 <div class="container">
@@ -36,12 +37,33 @@
 		  </div><!-- /.container-fluid -->
 		</nav>
 	</header>
-	<main></main>
+	<main>
+		<div id="map">
+				
+		</div>
+	</main>
 
 	<hr>
 	<footer class="text-center">Copyright &copy; 2017</footer>
 </div>
 
 <script type="text/javascript" scr="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+  function initMap() {
+    var uluru = {lat: 49.8237778, lng:24.0216412 };
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      scrollwheel: false,
+      center: uluru
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+  }
+</script>
+<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu2d4uLnKQBya4RmfSvfOQ2MrQDG2ffMQ&callback=initMap">
+</script>
 </body>
 </html>

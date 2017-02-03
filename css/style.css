@@ -5,10 +5,8 @@
 }
 
 .previews img {
-	min-width: 100%;
 	max-width: 100%;
-	object-fit: cover;
-	object-position: center;
+	max-height: 100%;
 	-webkit-transition: all .3s ease;
 	-moz-transition: all .3s ease;
 	-ms-transition: all .3s ease;
@@ -16,8 +14,23 @@
 	transition: all .3s ease;
 }
 
+.img-container:hover img {
+	zoom: 2;
+	max-width: 120%;
+	max-height: 120%;
+}
+
 .previews span {
 	display: block;
+}
+
+#map {
+	height: 400px;
+	width: 100%;
+}
+
+footer {
+	padding-bottom: 15px;
 }
 
 @media (min-width: 768px) {
@@ -25,12 +38,9 @@
 		height: 170px;
 	}
 	.previews img {
-		max-width: 120%;
-		min-height: 100%;
+		max-width: 100%;
 	}
-	/*.previews img:hover {
-		zoom: 1.5;
-	}*/
 }
 @media (min-width: 992px) {}
 @media (min-width: 1200px) {}
+
